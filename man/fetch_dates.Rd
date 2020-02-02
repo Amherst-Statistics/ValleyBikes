@@ -4,8 +4,7 @@
 \alias{fetch_dates}
 \title{fetch_dates}
 \usage{
-fetch_dates(start_date, end_date, output_dir, replace = FALSE,
-  quiet = FALSE)
+fetch_dates(start_date, end_date, output_dir, replace = FALSE, quiet = FALSE)
 }
 \arguments{
 \item{start_date}{The string (yyyy-mm-dd) for start of queried range}
