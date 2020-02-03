@@ -110,7 +110,7 @@ communities <- communities %>%
     left_join(community_names, by = "id")
 
 # use in package: uncomment line to make communities available in build
-# usethis::use_data(communities, overwrite = TRUE)
+usethis::use_data(communities, overwrite = TRUE)
 
 
 #' ------------------------------------------------------------------------
