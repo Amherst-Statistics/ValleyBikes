@@ -31,13 +31,19 @@
 ##' @param replace Boolean to overwrite existing files
 ##' @param quiet Boolean to omit download messages
 ##' @return invisible(output_paths) List of file paths to downloaded files
-##'
+##' @examples
+##' 
+##' # Fetch all files for August 2018 without printing messages.
+##' 
+##' fetch_dates("2018-08-01", "2018-09-01", quiet = TRUE)
 ##' @export
-fetch_dates <- function(start_date, end_date, output_dir,
+fetch_dates <- function(start_date, end_date, output_dir = ".",
                         replace = FALSE, quiet = FALSE) {
+    # creates a sequence of every day's date from start to end
     dates <- seq(from = lubridate::as_date(start_date),
                  to = lubridate::as_date(end_date),
                  by = "days")
+    # replaces dashes with underscores in the dates in the sequence
     dates <- purrr::map_chr(dates,
                             ~ stringr::str_replace_all(.x, "-", "_"))
     output_paths <- purrr::map_chr(dates,

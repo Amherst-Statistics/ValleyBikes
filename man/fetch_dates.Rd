@@ -4,7 +4,13 @@
 \alias{fetch_dates}
 \title{fetch_dates}
 \usage{
-fetch_dates(start_date, end_date, output_dir, replace = FALSE, quiet = FALSE)
+fetch_dates(
+  start_date,
+  end_date,
+  output_dir = ".",
+  replace = FALSE,
+  quiet = FALSE
+)
 }
 \arguments{
 \item{start_date}{The string (yyyy-mm-dd) for start of queried range}
@@ -28,4 +34,10 @@ Fetch data from Valley Bike service for specified dates. Provide a
 start date and an endate as well as a place to save the files that
 will be downloaded. The list of file paths for the downloaded
 files are returned invisibly.
+}
+\examples{
+
+# Fetch all files for August 2018 without printing messages.
+
+fetch_dates("2018-08-01", "2018-09-01", quiet = TRUE)
 }
