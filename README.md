@@ -1,3 +1,5 @@
+THIS PACKAGE IS NO LONGER ACTIVE: SEE https://github.com/Amherst-Statistics/valleybike for the new package.
+
 
 # `ValleyBikes`
 
